@@ -126,6 +126,8 @@ vercel login
 vercel deploy --prod
 ```
 
+The official site redeploys automatically whenever a change is pushed to the `main` branch of this repository.
+
 **Other hosts** (Netlify, Cloudflare Pages and so on) also work: build with `npm run build` and publish the `dist/` folder. For the fastest in-browser AI, send these two headers, already set in `vercel.json`:
 
 ```
