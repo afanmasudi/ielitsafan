@@ -1,96 +1,179 @@
+<div align="center">
+
+<img src="public/icon.svg" width="88" alt="IELTS Studio icon" />
+
 # IELTS Studio
 
-*Made by Afan Abdullah Masoodi* · Live at https://ielitsafan.vercel.app
+**Free, private IELTS preparation that runs entirely in your browser.**
 
-A private, local-first IELTS preparation platform. It covers Academic, General Training, UKVI and Life Skills, with full mock exams, a turn-by-turn voice examiner, writing feedback, a personalised study plan and a local AI tutor. It all runs in the browser: no account, no backend, no paid AI APIs.
+Mock exams · a live voice examiner · writing feedback · a Band 8.5 strategy guide · on-device AI
 
-> IELTS Studio is an independent practice tool. It is not affiliated with or endorsed by the British Council, IDP or Cambridge University Press & Assessment. All scores are practice estimates, not official results.
+**[▶ Open the app: ielitsafan.vercel.app](https://ielitsafan.vercel.app)**
+
+Made by **Afan Abdullah Masoodi**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fafanmasudi%2Fielitsafan&project-name=ielts-studio)
+&nbsp;
+![License: MIT](https://img.shields.io/badge/license-MIT-blue)
+![Tests](https://img.shields.io/badge/tests-122%20passing-brightgreen)
+![No account needed](https://img.shields.io/badge/account-not%20needed-lightgrey)
+
+</div>
+
+<p align="center">
+  <img src="docs/screenshots/dashboard.webp" width="49%" alt="Dashboard" />
+  <img src="docs/screenshots/speaking.webp" width="49%" alt="Speaking Lab with the live video-call examiner" />
+  <img src="docs/screenshots/guide.webp" width="49%" alt="Band 8.5 strategy guide" />
+  <img src="docs/screenshots/writing.webp" width="49%" alt="Writing Lab" />
+</p>
+
+---
+
+## What is it?
+
+IELTS Studio is a complete IELTS practice platform for **Academic, General Training, UKVI and Life Skills (A1, A2 and B1)**. It has original Reading and Listening tests with instant marking, Writing and Speaking feedback on the four official criteria, full mock exams, a personal study plan, and a **live video-call examiner** that listens, waits for you and asks follow-up questions.
+
+It is **private by design**:
+- **No account and no server.** Your essays, recordings, CV and progress never leave your device.
+- **No paid AI.** Speech recognition, the examiner's voice and the AI tutor run *inside your browser* using open models, downloaded only when you ask.
+- **Works offline** once loaded, and can be installed like an app on phones and computers.
+
+> IELTS Studio is an independent practice tool, not affiliated with the British Council, IDP or Cambridge University Press & Assessment. All scores are practice estimates, not official results.
+
+---
 
 ## Features
 
-| Area | What you get |
+| | |
 |---|---|
-| **Onboarding & plan** | Test type (Academic / GT / UKVI / Life Skills A1-B1), level, target, exam date, daily time, strong and weak skills, a 12-question placement check. Generates a week-by-week Foundation → Intermediate → Advanced plan, with extra time for weak skills, review days and spaced mock exams. Editable. |
-| **Band 8.5 Strategy Guide** | One short card per paper and question type: how to look at it, 3 to 5 steps, do and don't, a memory trick (A-R-E, O-R-E-O, PEEL, I-O-B-B, the contradiction test) and an original worked example. Also covers what Band 8.5 looks like, time plans and an exam-day checklist. Tips appear inline next to every practice question group (hidden in mock exams), plus a Tip of the day on the Dashboard. Sourced from the public band descriptors and IDP/IELTS pages, summarised in our own words. |
-| **Trending topics** | AI, social media, online learning, change and recycling: 4 new Part 1 topics, 4 cue cards with Part 3 questions, 3 Task 2 prompts with model answers (AI in schools, AI and jobs, misinformation), an AI essay-marking reading passage, AI and Digital life vocabulary, and guide cards ("Benefit, Risk, Rule" and "Who gains, who loses, who should act?"). All original, based on themes reported by prep sites. |
-| **Speaking Lab** | Three-part examiner run by a state machine (it can't skip or repeat questions): Part 1 topics, a Part 2 cue card with a 1-minute prep and 2-minute talk timer, and Part 3 discussion. Optional LLM follow-ups in Part 3. Recording, local Whisper transcription and an editable transcript. Feedback only at the end. Fluency is measured from the audio. Pronunciation is deliberately not scored; a read-aloud intelligibility drill is offered instead. |
-| **Live video-call examiner** | Hands-free conversation with an animated examiner (two personas, lip-synced to the voice). Continuous voice-activity detection decides when you start and finish. Before replying, it transcribes your pause to check whether your sentence is complete. It nudges after long silences, politely interrupts over-long answers, can be interrupted (opt-in, best with headphones), and handles "Sorry, can you repeat?", "What does X mean?" and "What about you?" the way an examiner would. It skips questions you've already answered and asks follow-ups. Optional webcam analysis covers face in view, eye contact, look-away episodes and mouth-movement versus audio. The report adds response time, interruptions, repeats and on-topic checks. Questions you've practised before are avoided, and AI-generated questions are de-duplicated by meaning. Also available for CV interviews. |
-| **Writing Lab** | Academic Task 1 (line, bar, pie, table, map, process, mixed: all rendered as live SVG), GT letters (formal, semi-formal, informal), and Task 2 (opinion, discussion, advantages/disadvantages, problem/solution, two-part). Timer, word count, autosave, paper/handwriting mode, four-criterion estimate with reasons and evidence, highlighted errors, automatic corrections, paragraph and vocabulary analysis, a model answer, and optional AI commentary. |
-| **Reading Lab** | A full Academic test and a full GT test (40 questions each) covering all 12 question types, with timer, navigator, highlighting, marking, explanations, and the supporting passage text highlighted after submission. |
-| **Listening Lab** | A 4-part, 40-question test (form, table, map, multiple choice, matching, notes, flow chart, sentence and short answer) voiced on-device with British and American speakers. Exam mode plays each part once with no pausing and hides transcripts until you submit. |
-| **Mock Exam Centre** | Academic, GT, UKVI Academic and UKVI GT full mocks (L → R → W → S), resumable, with the overall band and its uncertainty. Life Skills A1/A2/B1 with an examiner and a simulated partner, giving a Pass/Fail practice estimate. |
-| **Vocabulary** | Eight topic lists with collocations, SM-2 spaced repetition, your own words, and AI-generated lists. |
-| **Grammar** | Ten lessons with quizzes, aimed at errors that lower GRA. |
-| **AI Tutor** | WebLLM chat grounded in a local knowledge base (official information is labelled separately from teaching advice). Works offline as knowledge-base search when no model is loaded. |
-| **Interview Practice** | Upload a PDF/DOCX/TXT CV. It's parsed in the browser into education, experience, projects, skills, achievements, hobbies and goals, and turned into personalised interview questions with a voiced interviewer. You're asked before anything is saved. Clearly separate from IELTS Speaking. |
-| **Progress** | Pattern insights (Bayesian mastery per question type with likely range and trend, speaking fluency trends, rising and falling error patterns, band projection to your exam date), study minutes, streak, accuracy, skill trends, the last five mocks compared, most common mistakes, and weekly recommendations. |
-| **Settings** | Model manager (device check, sizes, download progress, load/unload/delete, modes), JSON export/import, profile PIN, delete a profile or all data, voice toggle. |
-| **PWA** | Installable; the app shell and learning content work offline after the first visit. |
+| 🎙️ **Speaking** | A three-part examiner (Part 1 topics, a Part 2 cue card with 1-minute prep and a 2-minute talk, Part 3 discussion). A **live video-call mode**: it speaks, waits for you to finish, can be interrupted, handles "Sorry, can you repeat?", and asks follow-ups. Optional webcam feedback on eye contact and presence. |
+| ✍️ **Writing** | Academic Task 1 (line, bar, pie, table, map, process, mixed), General Training letters and Task 2 essays. A timer, autosave, band estimates per criterion **with reasons**, highlighted errors, corrections, and model answers. |
+| 📖 **Reading** | Full Academic and General Training tests (40 questions each) covering all 12 question types, with highlighting, a navigator, instant marking, and the exact line of text that proves each answer. |
+| 🎧 **Listening** | A 4-part, 40-question test voiced in British and American English. Exam mode plays each recording once, as in the real test. |
+| 📝 **Mock exams** | Full Academic, General Training and UKVI mocks with official half-band rounding, plus Life Skills A1/A2/B1 with a simulated partner and a Pass/Fail estimate. |
+| 🧭 **Band 8.5 Guide** | How to approach every question type: what to look for, steps, do's and don'ts, a memory trick and a worked example. Covers trending topics such as AI. |
+| 🧠 **Smart features** | A personal study plan, spaced-repetition vocabulary, grammar lessons, an AI tutor, CV-based interview practice, and progress analytics (mastery by question type, fluency trends, projection to your exam date). Questions you have practised before aren't repeated. |
 
-## Quick start
+---
+
+## How to use it (no installation)
+
+1. Go to **https://ielitsafan.vercel.app** in Chrome, Edge, Safari or Firefox (desktop or phone).
+2. Click **Start for free** and create a profile (just a name, stored on your device).
+3. Answer the five setup questions (test type, level, target, exam date, weak skills) and take the 12-question placement check.
+4. Follow **Today's tasks** on the Dashboard, or open any lab from the menu.
+5. *(Optional)* For speaking with your voice, open **Speaking Lab → Start full live test** and download the speech model when asked (about 41 MB, one time). Headphones work best.
+6. *(Optional)* **Install it as an app:** in Chrome or Edge click the install icon in the address bar; on iPhone use Share → *Add to Home Screen*.
+
+**Your data:** everything is saved in this browser only. Use **Settings → Data & privacy → Export** to back it up or move it to another device.
+
+### Optional AI models
+
+Open **Settings → Model manager**. Nothing downloads automatically.
+
+| Model | Size | What it adds | Works on |
+|---|---|---|---|
+| Whisper Tiny | ~41 MB | Turns your spoken answers into text | Most phones and computers |
+| Kokoro voice | ~92 MB | A natural British/American examiner voice | Most devices |
+| MiniLM | ~23 MB | Understands "can you repeat?", checks answers stay on topic | Most devices |
+| MediaPipe Face | ~4 MB | Webcam feedback in live calls | Most devices |
+| Qwen3 (0.6B–4B) | 0.35–2.3 GB | AI tutor chat, written commentary, follow-up questions | Desktop Chrome/Edge with WebGPU |
+
+Without any models the app still works: you can type answers, hear the browser's built-in voice, and the tutor answers from its built-in guide.
+
+---
+
+## Run it on your own computer
+
+You need **[Node.js 20 or newer](https://nodejs.org/)** (the LTS version is fine) and **[Git](https://git-scm.com/)**.
 
 ```bash
+# 1. Download the code
+git clone https://github.com/afanmasudi/ielitsafan.git
+cd ielitsafan
+
+# 2. Install dependencies (takes a few minutes the first time)
 npm install
-npm run dev        # http://localhost:5173
-npm test           # 122 unit tests (scoring, analysers, content validation, data flows)
-npm run lint
-npm run build      # type-check + production build into dist/
-npm run preview    # serve the production build (service worker active)
+
+# 3. Start the app
+npm run dev
 ```
 
-Requires Node 20+ (tested on Node 24).
+Then open **http://localhost:5173** in your browser.
 
-## Deploying to Vercel
+Other commands:
 
-The app is a static Vite site. `vercel.json` already sets the build command, output directory, SPA rewrite, caching and security headers.
+```bash
+npm test           # run the 122 automated tests
+npm run lint       # check code style
+npm run build      # create a production build in dist/
+npm run preview    # serve the production build locally
+```
 
-1. Push the folder to a Git repository and import it at [vercel.com/new](https://vercel.com/new), **or** run `npm i -g vercel && vercel` and then `vercel --prod`.
-2. Framework preset: **Vite** (detected). Build command `npm run build`, output `dist`.
-3. You don't need any environment variables, and there are no server functions.
-4. `vercel.json` sends `Cross-Origin-Opener-Policy`/`Cross-Origin-Embedder-Policy` headers. These make the page cross-origin isolated, so the in-browser AI can use every CPU core.
+> **Windows tip:** if `npm` isn't recognised after installing Node.js, close and reopen your terminal.
 
-Notes:
-- The ONNX Runtime WebAssembly files (~48 MB in total) ship in `dist/assets` and are served from your own domain. WebLLM loads its WebGPU kernels and model weights from its public model library when a user chooses to download a model.
-- Microphone access requires HTTPS, which Vercel provides.
+---
 
-## Privacy model
+## Put your own copy online (free)
 
-- All data lives in IndexedDB in the user's browser (Dexie). Profiles don't sync between devices or browsers.
-- The PIN is a convenience lock, not security. It's stored as a salted PBKDF2 hash, but anyone with access to the browser profile can read IndexedDB.
-- CVs, recordings, essays and learning records are never transmitted. Recordings are processed in memory and only the transcript and timing statistics are kept.
-- The only network requests after first load are optional model downloads from Hugging Face and the WebLLM library, made when the user presses Download.
-- The app requests persistent storage and reminds users to export backups.
+**Easiest:** click **Deploy with Vercel** at the top of this page, sign in with GitHub, and click **Deploy**. Vercel copies the repository to your account, builds it, and gives you a link such as `your-name.vercel.app`. No settings or environment variables are needed.
 
-## Project structure
+**Using the command line:**
+
+```bash
+npm i -g vercel
+vercel login
+vercel deploy --prod
+```
+
+**Other hosts** (Netlify, Cloudflare Pages and so on) also work: build with `npm run build` and publish the `dist/` folder. For the fastest in-browser AI, send these two headers, already set in `vercel.json`:
+
+```
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+Microphone and camera need **HTTPS**, which all of these hosts provide.
+
+---
+
+## How it works
+
+- **Frontend:** React, TypeScript, Vite and Tailwind CSS, as a static site with no backend.
+- **Storage:** IndexedDB (via Dexie), local to each browser. JSON export and import for backups.
+- **On-device AI:** [Transformers.js](https://github.com/huggingface/transformers.js) (Whisper speech recognition, MiniLM), [kokoro-js](https://github.com/hexgrad/kokoro) (voice), [WebLLM](https://github.com/mlc-ai/web-llm) (Qwen3 tutor) and [MediaPipe](https://ai.google.dev/edge/mediapipe) (face tracking). All run in Web Workers, so the page stays responsive.
+- **Scoring:** a separate, tested module that follows the official rounding rules. AI writes commentary only; it never invents band scores.
 
 ```
 src/
-  ai/          Whisper, Kokoro and WebLLM wrappers + their Web Workers, model catalogue, device checks
-  lib/         scoring engine, writing & speaking analysers, text rules, marking, plan, SRS, DB, backup, CV parser, recorder
-  content/     original passages, scripts, prompts, cue cards, vocabulary, grammar, Life Skills tasks, knowledge base
-  features/    test runners reused by labs and mocks (Reading, Listening, Writing, Speaking, Life Skills)
-  components/  UI kit, layout, charts (SVG), question renderer, recorder UI, criteria report
-  pages/       one file per section
+  ai/          speech, voice, language-model and face workers
+  lib/         scoring, analysers, turn-taking, study plan, storage
+  content/     original tests, prompts, cue cards, vocabulary, strategy guide
+  features/    test runners and the live examiner
+  components/  UI building blocks
+  pages/       one file per screen
 ```
 
-## Known limitations
+More detail: [RESEARCH.md](RESEARCH.md) (sources and design decisions) · [MODEL_GUIDE.md](MODEL_GUIDE.md) (AI models) · [TESTING.md](TESTING.md) (test report).
 
-- Estimates aren't validated against examiners. Writing and Speaking estimates come from transparent feature rules, calibrated only on a small set of sample essays. Expect ±1 band.
-- Pronunciation isn't scored. Whisper transcripts can't show it, and there's no validated in-browser acoustic model. The read-aloud drill measures ASR intelligibility only, and ASR is less accurate for some accents.
-- The grammar checker catches common learner errors (agreement, articles, prepositions, uncountables, spelling, collocations). It doesn't catch every error or check meaning.
-- Content volume: one full Academic Reading test, one GT Reading test and one Listening test, plus 15 writing prompts and 12 cue cards. All original. More tests can be added in `src/content/` (the validation test checks any new keys automatically).
-- Listening accents: Kokoro provides British and American English only.
-- Life Skills partner turns are scripted. They can't react to everything you say, so this can't reproduce a real paired test.
-- The local LLM needs WebGPU and 1-4 GB of GPU memory. It's usually unavailable on phones; there the tutor runs in offline mode.
-- Speech recognition is turn-based (each answer is transcribed in short pauses and at the end), not word-by-word streaming.
-- The examiner avatar is an illustrated, animated character, not a photorealistic human. Webcam feedback is about on-camera presence only; IELTS does not mark body language.
-- On CPU the neural voice is about 1.5× slower than speech. The app pre-voices upcoming lines to hide this; the optional GPU voice (326 MB) makes it fast.
-- Raw-to-band tables are the approximate published ones. Real tests vary by version.
+---
 
-## Licence acknowledgements
+## Limitations
 
-Dependencies: React (MIT), Vite (MIT), Tailwind CSS (MIT), Dexie (Apache-2.0), lucide-react (ISC), @huggingface/transformers (Apache-2.0), @mlc-ai/web-llm (Apache-2.0), kokoro-js (Apache-2.0), pdf.js (Apache-2.0), mammoth (BSD-2-Clause), Inter and Plus Jakarta Sans fonts (SIL OFL 1.1). Models: see [MODEL_GUIDE.md](MODEL_GUIDE.md). Repositories that informed the design are listed in [RESEARCH.md](RESEARCH.md); no code was copied from them.
+- Writing and Speaking scores are **estimates from transparent rules**, not examiner marks. Expect about ±1 band.
+- **Pronunciation is not scored.** A transcript can't show it, and accents are never penalised.
+- The AI tutor needs WebGPU (desktop Chrome or Edge). Phones use the offline guide instead.
+- One full test of each type is included so far; more can be added in `src/content/`.
 
-All passages, scripts, prompts, model answers, questions and lessons were written for IELTS Studio. No commercial IELTS materials are reproduced.
+---
 
-See also: [RESEARCH.md](RESEARCH.md) · [MODEL_GUIDE.md](MODEL_GUIDE.md) · [TESTING.md](TESTING.md)
+## Contributing
+
+Ideas, bug reports and new practice material are welcome. Open an **Issue** or a **Pull Request**. Please run `npm test` and `npm run lint` before submitting. All test content must be original (no copied IELTS book material).
+
+## Licence and credits
+
+Released under the **[MIT License](LICENSE)**: free to use, copy, change and share, with attribution.
+© 2026 Afan Abdullah Masoodi.
+
+Photos: public domain (CC0) via Wikimedia Commons (see [public/images/CREDITS.md](public/images/CREDITS.md)). AI models and libraries keep their own open-source licences (Apache-2.0 / MIT; Llama 3.2 under its community licence); see [MODEL_GUIDE.md](MODEL_GUIDE.md).

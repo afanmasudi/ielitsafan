@@ -42,5 +42,13 @@
     "pdfjs-dist": "^6.5.438",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
+  },
+  "license": "MIT",
+  "author": "Afan Abdullah Masoodi",
+  "description": "Free, private IELTS preparation that runs entirely in your browser.",
+  "homepage": "https://ielitsafan.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afanmasudi/ielitsafan.git"
   }
 }
