@@ -1,0 +1,10 @@
+node_modules
+dist
+*.local
+.vercel
+public/mediapipe
+.stock-raw
+
+.vercel
+.env*
+tsconfig.tsbuildinfo
